@@ -4,7 +4,7 @@ data-toggle="modal" data-target="#exampleModal"
 (click)="addClick()"
 data-backdrop="static" data-keyboard="false"
 >
-    Add Categoria
+    Add Produtos
   </button>
 
   <!-- Modal -->
@@ -20,8 +20,8 @@ data-backdrop="static" data-keyboard="false"
           </button>
         </div>
         <div class="modal-body">
-            <app-add-edit-cat [cat]="cat" *ngIf="ActivateAddEditCatComp">
-            </app-add-edit-cat>
+          <!-- <app-add-edit-prod [prod]="prod" *ngIf="ActivateAddEditProdComp">
+          </app-add-edit-prod> -->
         </div>
       </div>
     </div>
@@ -32,16 +32,24 @@ data-backdrop="static" data-keyboard="false"
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>
-              Nome da Categoria</th>
+          <th>Id</th>
+            <th>Nome do Produto</th>
+            <th>Nome do Produto</th>
+            <th>Quantidade</th>
+            <th>Empresa</th>
+
             <th>Opções</th>
+            <button></button>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let dataItem of CategoryList">
-            <td>{{dataItem.CategoryId}}</td>
-            <td>{{dataItem.CategoryName}}</td>
+        <tr *ngFor="let dataItem of ProductList">
+            <td>{{dataItem.ProductId}}</td>
+            <td>{{dataItem.ProductName}}</td>
+            <td>{{dataItem.ProductQnt}}</td>
+            <td>{{dataItem.CompanyId}}</td>
             <td>
+
                 <button type="button" class="btn btn-light mr-1"
                 data-toggle="modal" data-target="#exampleModal"
 (click)="editClick(dataItem)"

@@ -37,6 +37,7 @@ data-backdrop="static" data-keyboard="false"
             <th>CNPJ</th>
             <th>Endereço</th>
             <th>Opções</th>
+            <button></button>
         </tr>
     </thead>
     <tbody>
@@ -46,6 +47,7 @@ data-backdrop="static" data-keyboard="false"
             <td>{{dataItem.CompanyCNPJ}}</td>
             <td>{{dataItem.CompanyAdress}}</td>
             <td>
+            <button type="button" class="btn btn-primary" routerLink='product'> Produtos</button>
                 <button type="button" class="btn btn-light mr-1"
                 data-toggle="modal" data-target="#exampleModal"
 (click)="editClick(dataItem)"

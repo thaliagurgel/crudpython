@@ -1,0 +1,16 @@
+<div class="form-froup row">
+
+  <label class="col-sm-2 col-form-label">Nome da empresa</label>
+  <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="CompanyName"
+      placeholder="Digite o nome da empresa">
+  </div>
+</div>
+
+<button (click)="addCompany()" *ngIf="comp.CompanyId==0" class="btn btn-primary">
+  Add
+</button>
+
+<button (click)="updateCompany()" *ngIf="comp.CompanyId!=0" class="btn btn-primary">
+  Update
+</button>
